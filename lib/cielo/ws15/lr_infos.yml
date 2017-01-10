@@ -1,31 +1,31 @@
 "00":
-  message: "Transação autorizada"
-  description: "Autorização aprovada"
-  action: "Autorização aprovada"
+  message: "Transação autorizada com sucesso."
+  description: "Transação autorizada com sucesso."
+  action: "Transação autorizada com sucesso."
   retryable: false
   card_error: false
 "000":
-  message: "Transação autorizada"
-  description: "Autorização aprovada"
-  action: "Autorização aprovada"
+  message: "Transação autorizada com sucesso."
+  description: "Transação autorizada com sucesso."
+  action: "Transação autorizada com sucesso."
   retryable: false
   card_error: false
 "01":
-  message: "Transação não autorizada - Referida pelo banco emissor."
-  description: "Transação não autorizada - Referida pelo banco emissor."
+  message: "Transação não autorizada. Transação referida."
+  description: "Transação não autorizada. Referida (suspeita de fraude) pelo banco emissor."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: false
   card_error: false
 "02":
-  message: "Consultar Cielo. Transação referida."
-  description: "Transação não autorizada. Referida por alguma regra do banco."
+  message: "Transação não autorizada. Transação referida."
+  description: "Transação não autorizada. Referida (suspeita de fraude) pelo banco emissor."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: false
   card_error: false
 "03":
-  message: "Erro no cadastramento do código do estabelecimento no arquivo de configuração do TEF"
-  description: "Transação negada. Estabelecimento inválido."
-  action: "Não foi possível processar a transação."
+  message: "Transação não permitida. Erro no cadastramento do código do estabelecimento no arquivo de configuração do TEF"
+  description: "Transação não permitida. Estabelecimento inválido. Entre com contato com a Cielo."
+  action: "Não foi possível processar a transação. Entre com contato com a Loja Virtual."
   retryable: false
   card_error: false
 "04":
@@ -53,33 +53,33 @@
   retryable: false
   card_error: true
 "08":
-  message: "Transação não autorizada. CVV2 inválido"
-  description: "Transação não autorizada."
-  action: "Transação não autorizada."
+  message: "Transação não autorizada. Código de segurança inválido."
+  description: "Transação não autorizada. Código de segurança inválido. Oriente o portador a corrigir os dados e tentar novamente."
+  action: "Transação não autorizada. Dados incorretos. Reveja os dados e informe novamente."
   retryable: false
   card_error: true
 "11":
-  message: "Transação autorizada para cartão emitido no exterior"
-  description: "Autorização aprovada"
-  action: "Autorização aprovada"
+  message: "Transação autorizada com sucesso para cartão emitido no exterior"
+  description: "Transação autorizada com sucesso."
+  action: "Transação autorizada com sucesso."
   retryable: false
   card_error: false
 "12":
   message: "Transação inválida, erro no cartão."
   description: "Não foi possível processar a transação. Solicite ao portador que verifique os dados do cartão e tente novamente."
-  action: "Não foi possível processar a transação. Reveja os dados e tente novamente. Se o erro persistir, entre em contato com seu banco emissor."
+  action: "Não foi possível processar a transação. reveja os dados informados e tente novamente. Se o erro persistir, entre em contato com seu banco emissor."
   retryable: false
   card_error: true
 "13":
-  message: "Valor da transação Inválido."
-  description: "Transação não autorizada. Valor inválido. Solicite ao portador que reveja o valor e tente novamente. Se o erro persistir, entre em contato com a Cielo."
+  message: "Transação não permitida. Valor da transação Inválido."
+  description: "Transação não permitida. Valor inválido. Solicite ao portador que reveja os dados e novamente. Se o erro persistir, entre em contato com a Cielo."
   action: "Transação não autorizada. Valor inválido. Refazer a transação confirmando os dados informados. Persistindo o erro, entrar em contato com a loja virtual."
   retryable: false
   card_error: false
 "14":
-  message: "Cartão inválido"
-  description: "Transação não autorizada. Cartão inválido. Tente usar o Algoritmo de Lhum (Mod 10) para evitar transações não autorizadas por esse motivo."
-  action: "Transação não autorizada. Cartão inválido.  Refazer a transação confirmando os dados informados."
+  message: "Transação não autorizada. Cartão Inválido"
+  description: "Transação não autorizada. Cartão inválido. Pode ser bloqueio do cartão no banco emissor, dados incorretos ou tentativas de testes de cartão. Use o Algoritmo de Lhum (Mod 10) para evitar transações não autorizadas por esse motivo. Consulte www.cielo.com.br/desenvolvedores para implantar o Algoritmo de Lhum."
+  action: "Não foi possível processar a transação. reveja os dados informados e tente novamente. Se o erro persistir, entre em contato com seu banco emissor."
   retryable: false
   card_error: true
 "15":
@@ -107,7 +107,7 @@
   retryable: false
   card_error: false
 "23":
-  message: "Valor da prestação inválido."
+  message: "Transação não autorizada. Valor da prestação inválido."
   description: "Não foi possível processar a transação. Valor da prestação inválido. Se o erro persistir, entre em contato com a Cielo."
   action: "Não foi possível processar a transação. Valor da prestação inválido. Refazer a transação confirmando os dados informados. Persistindo o erro, entrar em contato com a loja virtual."
   retryable: false
@@ -120,18 +120,18 @@
   card_error: false
 "25":
   message: "Pedido de autorização não enviou número do cartão"
-  description: "Não foi possível processar a transação. Solicitação de autorização não enviou o número do cartão. Se o erro persistir, entre em contato com a Cielo."
-  action: "Não foi possível processar a transação. Refazer a transação confirmando os dados informados. Persistindo o erro, entrar em contato com a loja virtual."
+  description: "Não foi possível processar a transação. Solicitação de autorização não enviou o número do cartão. Se o erro persistir, verifique a comunicação entre loja virtual e Cielo."
+  action: "Não foi possível processar a transação. reveja os dados informados e tente novamente. Persistindo o erro, entrar em contato com a loja virtual."
   retryable: true
   card_error: false
 "28":
   message: "Arquivo temporariamente indisponível."
-  description: "Não foi possível processar a transação. Arquivo temporariamente indisponível. Se o erro persistir, entre em contato com a Cielo."
-  action: "Não foi possível processar a transação. Tente novamente mais tarde."
+  description: "Não foi possível processar a transação. Arquivo temporariamente indisponível. Reveja a comunicação entre Loja Virtual e Cielo. Se o erro persistir, entre em contato com a Cielo."
+  action: "Não foi possível processar a transação. Entre com contato com a Loja Virtual."
   retryable: true
   card_error: false
 "39":
-  message: "Erro no banco emissor"
+  message: "Transação não autorizada. Erro no banco emissor."
   description: "Transação não autorizada. Erro no banco emissor."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: false
@@ -149,7 +149,7 @@
   retryable: false
   card_error: true
 "51":
-  message: "Limite excedido/sem saldo."
+  message: "Transação não autorizada. Limite excedido/sem saldo."
   description: "Transação não autorizada. Limite excedido/sem saldo."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: true
@@ -157,7 +157,7 @@
 "52":
   message: "Cartão com dígito de controle inválido."
   description: "Não foi possível processar a transação. Cartão com dígito de controle inválido."
-  action: "Transação não autorizada. Refazer a transação confirmando os dados."
+  action: "Transação não autorizada. Reveja os dados informados e tente novamente."
   retryable: false
   card_error: true
 "53":
@@ -167,7 +167,7 @@
   retryable: false
   card_error: true
 "54":
-  message: "Cartão vencido"
+  message: "Transação não autorizada. Cartão vencido"
   description: "Transação não autorizada. Cartão vencido."
   action: "Transação não autorizada. Refazer a transação confirmando os dados."
   retryable: false
@@ -232,16 +232,28 @@
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: true
   card_error: false
+"67":
+  message: "Transação não autorizada. Cartão bloqueado para compras hoje."
+  description: "Transação não autorizada. Cartão bloqueado para compras hoje. Bloqueio pode ter ocorrido por excesso de tentativas inválidas. O cartão será desbloqueado automaticamente à meia noite."
+  action: "Transação não autorizada. Cartão bloqueado temporariamente. Entre em contato com seu banco emissor."
+  retryable: true
+  card_error: false
 "70":
-  message: "Transação não autorizada. Limite excedido."
+  message: "Transação não autorizada. Limite excedido/sem saldo."
   description: "Transação não autorizada. Limite excedido/sem saldo."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
-  retryable: false
-  card_error: true
+  retryable: true
+  card_error: false
 "72":
   message: "Cancelamento não efetuado. Saldo disponível para cancelamento insuficiente."
   description: "Cancelamento não efetuado. Saldo disponível para cancelamento insuficiente. Se o erro persistir, entre em contato com a Cielo."
   action: "Cancelamento não efetuado. Tente novamente mais tarde. Se o erro persistir, entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"74":
+  message: "Transação não autorizada. A senha está vencida."
+  description: "Transação não autorizada. A senha está vencida."
+  action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: false
   card_error: false
 "75":
@@ -286,10 +298,16 @@
   action: "Transação não autorizada. Refazer a transação confirmando os dados. Se o erro persistir, entre em contato com seu banco emissor."
   retryable: false
   card_error: false
-"97":
-  message: "Valor não permitido para essa transação."
-  description: "Transação não autorizada. Valor não permitido para essa transação."
-  action: "Transação não autorizada. Valor não permitido para essa transação."
+"85":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão, se o erro persistir pode haver um problema no terminal do lojista, nesse caso o lojista deve entrar em contato com a Cielo."
+  action: "Transação não permitida. Informe os dados do cartão novamente. Se o erro persistir, entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"86":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão, se o erro persistir pode haver um problema no terminal do lojista, nesse caso o lojista deve entrar em contato com a Cielo."
+  action: "Transação não permitida. Informe os dados do cartão novamente. Se o erro persistir, entre em contato com a loja virtual."
   retryable: false
   card_error: false
 "89":
@@ -297,6 +315,12 @@
   description: "Transação não autorizada. Erro na transação. O portador deve tentar novamente e se o erro persistir, entrar em contato com o banco emissor."
   action: "Transação não autorizada. Erro na transação. Tente novamente e se o erro persistir, entre em contato com seu banco emissor."
   retryable: true
+  card_error: false
+"90":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão, se o erro persistir pode haver um problema no terminal do lojista, nesse caso o lojista deve entrar em contato com a Cielo."
+  action: "Transação não permitida. Informe os dados do cartão novamente. Se o erro persistir, entre em contato com a loja virtual."
+  retryable: false
   card_error: false
 "91":
   message: "Transação não autorizada. Banco emissor temporariamente indisponível."
@@ -322,6 +346,12 @@
   action: "Sua Transação não pode ser processada, Tente novamente mais tarde. Se o erro persistir, entre em contato com a loja virtual."
   retryable: true
   card_error: false
+"97":
+  message: "Valor não permitido para essa transação."
+  description: "Transação não autorizada. Valor não permitido para essa transação."
+  action: "Transação não autorizada. Valor não permitido para essa transação."
+  retryable: false
+  card_error: false
 "98":
   message: "Sistema/comunicação indisponível."
   description: "Transação não autorizada. Sistema do emissor sem comunicação. Se for geral, verificar SITEF, GATEWAY e/ou Conectividade."
@@ -346,44 +376,164 @@
   action: "Tempo excedido na sua comunicação com o banco emissor, tente novamente mais tarde. Se o erro persistir, entre em contato com seu banco."
   retryable: true
   card_error: false
+"AC":
+  message: "Transação não permitida. Cartão de débito sendo usado com crédito. Use a função débito."
+  description: "Transação não permitida. Cartão de débito sendo usado com crédito. Solicite ao portador que selecione a opção de pagamento Cartão de Débito."
+  action: "Transação não autorizada. Tente novamente selecionando a opção de pagamento cartão de débito."
+  retryable: false
+  card_error: true
 "AE":
   message: "Tente Mais Tarde"
   description: "Tempo excedido na comunicação com o banco emissor. Oriente o portador a tentar novamente, se o erro persistir será necessário que o portador contate seu banco emissor."
   action: "Tempo excedido na sua comunicação com o banco emissor, tente novamente mais tarde. Se o erro persistir, entre em contato com seu banco."
   retryable: true
   card_error: false
+"AF":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão, se o erro persistir pode haver um problema no terminal do lojista, nesse caso o lojista deve entrar em contato com a Cielo."
+  action: "Transação não permitida. Informe os dados do cartão novamente. Se o erro persistir, entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"AG":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão, se o erro persistir pode haver um problema no terminal do lojista, nesse caso o lojista deve entrar em contato com a Cielo."
+  action: "Transação não permitida. Informe os dados do cartão novamente. Se o erro persistir, entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"AH":
+  message: "Transação não permitida. Cartão de crédito sendo usado com débito. Use a função crédito."
+  description: "Transação não permitida. Cartão de crédito sendo usado com débito. Solicite ao portador que selecione a opção de pagamento Cartão de Crédito."
+  action: "Transação não autorizada. Tente novamente selecionando a opção de pagamento cartão de crédito."
+  retryable: false
+  card_error: true
+"AI":
+  message: "Transação não autorizada. Autenticação não foi realizada."
+  description: "Transação não autorizada. Autenticação não foi realizada. O portador não concluiu a autenticação. Solicite ao portador que reveja os dados e tente novamente. Se o erro persistir, entre em contato com a Cielo informando o BIN (6 primeiros dígitos do cartão)"
+  action: "Transação não autorizada. Autenticação não foi realizada com sucesso. Tente novamente e informe corretamente os dados solicitado. Se o erro persistir, entre em contato com o lojista."
+  retryable: false
+  card_error: false
+"AJ":
+  message: "Transação não permitida. Transação de crédito ou débito em uma operação que permite apenas Private Label. Tente novamente selecionando a opção Private Label."
+  description: "Transação não permitida. Transação de crédito ou débito em uma operação que permite apenas Private Label. Solicite ao portador que tente novamente selecionando a opção Private Label. Caso não disponibilize a opção Private Label verifique na Cielo se o seu estabelecimento permite essa operação."
+  action: "Transação não permitida. Transação de crédito ou débito em uma operação que permite apenas Private Label. Tente novamente e selecione a opção Private Label. Em caso de um novo erro entre em contato com a loja virtual."
+  retryable: false
+  card_error: true
 "AV":
-  message: "Dados Inválidos"
-  description: "Falha na validação dos dados da transação. Oriente o portador a tentar novamente."
-  action: "Falha na validação dos dados. Tente novamente"
+  message: "Transação não autorizada. Dados Inválidos"
+  description: "Falha na validação dos dados da transação. Oriente o portador a rever os dados e tentar novamente."
+  action: "Falha na validação dos dados. Reveja os dados informados e tente novamente."
+  retryable: true
+  card_error: false
+"BD":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão, se o erro persistir pode haver um problema no terminal do lojista, nesse caso o lojista deve entrar em contato com a Cielo."
+  action: "Transação não permitida. Informe os dados do cartão novamente. Se o erro persistir, entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"BL":
+  message: "Transação não autorizada. Limite diário excedido."
+  description: "Transação não autorizada. Limite diário excedido. Solicite ao portador que entre em contato com seu banco emissor."
+  action: "Transação não autorizada. Limite diário excedido. Entre em contato com seu banco emissor."
   retryable: true
   card_error: false
 "BM":
-  message: "Cartão Inválido"
-  description: "Transação não autorizada. Cartão inválido. Tente usar o Algoritmo de Lhum (Mod 10) para evitar transações não autorizadas por esse motivo."
+  message: "Transação não autorizada. Cartão Inválido"
+  description: "Transação não autorizada. Cartão inválido. Pode ser bloqueio do cartão no banco emissor ou dados incorretos. Tente usar o Algoritmo de Lhum (Mod 10) para evitar transações não autorizadas por esse motivo."
   action: "Transação não autorizada. Cartão inválido.  Refaça a transação confirmando os dados informados."
   retryable: false
   card_error: true
-"BV":
-  message: "Cartão vencido"
-  description: "Transação não autorizada. Cartão Vencido."
-  action: "Transação não autorizada. Verifique os dados e tente novamente."
+"BN":
+  message: "Transação não autorizada. Cartão ou conta bloqueado."
+  description: "Transação não autorizada. O cartão ou a conta do portador está bloqueada. Solicite ao portador que entre em contato com  seu banco emissor."
+  action: "Transação não autorizada. O cartão ou a conta do portador está bloqueada. Entre em contato com  seu banco emissor."
   retryable: false
   card_error: true
-"DA":
-  message: "Estabelecimento Inválido 03"
-  description: "Transação não autorizada. Falha na comunicação com o banco emissor. Oriente o portador a entrar em contato com o banco emissor."
-  action: "Transação não autorizada. Entre em contato com o banco emissor."
+"BO":
+  message: "Transação não permitida. Falha da operação."
+  description: "Transação não permitida. Houve um erro no processamento. Solicite ao portador que digite novamente os dados do cartão, se o erro persistir, entre em contato com o banco emissor."
+  action: "Transação não permitida. Houve um erro no processamento. Digite novamente os dados do cartão, se o erro persistir, entre em contato com o banco emissor."
+  retryable: true
+  card_error: false
+"BP":
+  message: "Transação não autorizada. Conta corrente inexistente."
+  description: "Transação não autorizada. Não possível processar a transação por um erro relacionado ao cartão ou conta do portador. Solicite ao portador que entre em contato com o banco emissor."
+  action: "Transação não autorizada. Não possível processar a transação por um erro relacionado ao cartão ou conta do portador. Entre em contato com o banco emissor."
+  retryable: false
+  card_error: true
+"BV":
+  message: "Transação não autorizada. Cartão vencido"
+  description: "Transação não autorizada. Cartão vencido."
+  action: "Transação não autorizada. Refazer a transação confirmando os dados."
+  retryable: false
+  card_error: true
+"CF":
+  message: "Transação não autorizada.C79:J79 Falha na validação dos dados."
+  description: "Transação não autorizada. Falha na validação dos dados. Solicite ao portador que entre em contato com o banco emissor."
+  action: "Transação não autorizada. Falha na validação dos dados. Entre em contato com o banco emissor."
   retryable: false
   card_error: false
+"CG":
+  message: "Transação não autorizada. Falha na validação dos dados."
+  description: "Transação não autorizada. Falha na validação dos dados. Solicite ao portador que entre em contato com o banco emissor."
+  action: "Transação não autorizada. Falha na validação dos dados. Entre em contato com o banco emissor."
+  retryable: false
+  card_error: false
+"DA":
+  message: "Transação não autorizada. Falha na validação dos dados."
+  description: "Transação não autorizada. Falha na validação dos dados. Solicite ao portador que entre em contato com o banco emissor."
+  action: "Transação não autorizada. Falha na validação dos dados. Entre em contato com o banco emissor."
+  retryable: false
+  card_error: false
+"DF":
+  message: "Transação não permitida. Falha no cartão ou cartão inválido."
+  description: "Transação não permitida. Falha no cartão ou cartão inválido. Solicite ao portador que digite novamente os dados do cartão, se o erro persistir, entre em contato com o banco"
+  action: "Transação não permitida. Falha no cartão ou cartão inválido. Digite novamente os dados do cartão, se o erro persistir, entre em contato com o banco "
+  retryable: true
+  card_error: false
+"DM":
+  message: "Transação não autorizada. Limite excedido/sem saldo."
+  description: "Transação não autorizada. Limite excedido/sem saldo."
+  action: "Transação não autorizada. Entre em contato com seu banco emissor."
+  retryable: true
+  card_error: false
+"DQ":
+  message: "Transação não autorizada. Falha na validação dos dados."
+  description: "Transação não autorizada. Falha na validação dos dados. Solicite ao portador que entre em contato com o banco emissor."
+  action: "Transação não autorizada. Falha na validação dos dados. Entre em contato com o banco emissor."
+  retryable: false
+  card_error: false
+"DS":
+  message: "Transação não permitida para o cartão"
+  description: "Transação não autorizada. Transação não permitida para o cartão."
+  action: "Transação não autorizada. Entre em contato com seu banco emissor."
+  retryable: true
+  card_error: false
+"EB":
+  message: "Transação não autorizada. Limite diário excedido."
+  description: "Transação não autorizada. Limite diário excedido. Solicite ao portador que entre em contato com seu banco emissor."
+  action: "Transação não autorizada. Limite diário excedido. Entre em contato com seu banco emissor."
+  retryable: true
+  card_error: false
+"EE":
+  message: "Transação não permitida. Valor da parcela inferior ao mínimo permitido."
+  description: "Transação não permitida. Valor da parcela inferior ao mínimo permitido. Não é permitido parcelas inferiores a R$ 5,00. Necessário rever calculo para parcelas."
+  action: "Transação não permitida. O valor da parcela está abaixo do mínimo permitido. Entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"EK":
+  message: "Transação não permitida para o cartão"
+  description: "Transação não autorizada. Transação não permitida para o cartão."
+  action: "Transação não autorizada. Entre em contato com seu banco emissor."
+  retryable: true
+  card_error: false
 "FA":
-  message: "Negada"
+  message: "Transação não autorizada. "
   description: "Transação não autorizada AmEx."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: false
-  card_error: false
+  card_error: true
 "FC":
-  message: "Ligue Emissor"
+  message: "Transação não autorizada. Ligue Emissor"
   description: "Transação não autorizada. Oriente o portador a entrar em contato com o banco emissor."
   action: "Transação não autorizada. Entre em contato com seu banco emissor."
   retryable: false
@@ -402,25 +552,79 @@
   card_error: false
 "FF":
   message: "Cancelamento OK"
-  description: "Transação de cancelamento autorizada com sucesso"
+  description: "Transação de cancelamento autorizada com sucesso. ATENÇÂO: Esse retorno é para casos de cancelamentos e não para casos de autorizações."
   action: "Transação de cancelamento autorizada com sucesso"
   retryable: false
   card_error: false
 "FG":
-  message: "LIGUE AMEX"
+  message: "Transação não autorizada. Ligue AmEx."
   description: "Transação não autorizada. Oriente o portador a entrar em contato com a Central de Atendimento AmEx."
-  action: "Transação não autorizada. Entre em contato com a Central de Atendimento AmEx."
+  action: "Transação não autorizada. Entre em contato com a Central de Atendimento AmEx no telefone 08007285090"
   retryable: false
   card_error: false
 "FG":
   message: "Ligue 08007285090"
   description: "Transação não autorizada. Oriente o portador a entrar em contato com a Central de Atendimento AmEx."
-  action: "Transação não autorizada. Entre em contato com a Central de Atendimento AmEx."
+  action: "Transação não autorizada. Entre em contato com a Central de Atendimento AmEx no telefone 08007285090"
+  retryable: false
+  card_error: false
+"GA":
+  message: "Aguarde Contato"
+  description: "Transação não autorizada. Referida pelo Lynx Online de forma preventiva. A Cielo entrará em contato com o lojista sobre esse caso."
+  action: "Transação não autorizada. Entre em contato com o lojista."
+  retryable: false
+  card_error: false
+"HJ":
+  message: "Transação não permitida. Código da operação inválido."
+  description: "Transação não permitida. Código da operação Coban inválido."
+  action: "Transação não permitida. Código da operação Coban inválido. Entre em contato com o lojista."
+  retryable: false
+  card_error: false
+"IA":
+  message: "Transação não permitida. Indicador da operação inválido."
+  description: "Transação não permitida. Indicador da operação Coban inválido."
+  action: "Transação não permitida. Indicador da operação Coban inválido. Entre em contato com o lojista."
   retryable: false
   card_error: false
 "JB":
-  message: "Valor da transação Inválido."
-  description: "Transação não autorizada. Valor inválido. Solicite ao portador que reveja o valor e tente novamente. Se o erro persistir, entre em contato com a Cielo."
-  action: "Transação não autorizada. Valor inválido. Refazer a transação confirmando os dados informados. Persistindo o erro, entrar em contato com a loja virtual."
+  message: "Transação não permitida. Valor da operação inválido."
+  description: "Transação não permitida. Valor da operação Coban inválido."
+  action: "Transação não permitida. Valor da operação Coban inválido. Entre em contato com o lojista."
+  retryable: false
+  card_error: false
+"KA":
+  message: "Transação não permitida. Falha na validação dos dados."
+  description: "Transação não permitida. Houve uma falha na validação dos dados. Solicite ao portador que reveja os dados e tente novamente. Se o erro persistir verifique a comunicação entre loja virtual e Cielo."
+  action: "Transação não permitida. Houve uma falha na validação dos dados. reveja os dados informados e tente novamente. Se o erro persistir entre em contato com a Loja Virtual."
+  retryable: false
+  card_error: false
+"KB":
+  message: "Transação não permitida. Selecionado a opção incorrente."
+  description: "Transação não permitida. Selecionado a opção incorreta. Solicite ao portador que reveja os dados e tente novamente. Se o erro persistir deve ser verificado a comunicação entre loja virtual e Cielo."
+  action: "Transação não permitida. Selecionado a opção incorreta. Tente novamente. Se o erro persistir entre em contato com a Loja Virtual."
+  retryable: false
+  card_error: false
+"KE":
+  message: "Transação não autorizada. Falha na validação dos dados."
+  description: "Transação não autorizada. Falha na validação dos dados. Opção selecionada não está habilitada. Verifique as opções disponíveis para o portador."
+  action: "Transação não autorizada. Falha na validação dos dados. Opção selecionada não está habilitada. Entre em contato com a loja virtual."
+  retryable: false
+  card_error: false
+"N7":
+  message: "Transação não autorizada. Código de segurança inválido."
+  description: "Transação não autorizada. Código de segurança inválido. Oriente o portador corrigir os dados e tentar novamente."
+  action: "Transação não autorizada. Reveja os dados e informe novamente."
+  retryable: false
+  card_error: false
+"R1":
+  message: "Transação não autorizada. Cartão inadimplente (Do not honor)."
+  description: "Transação não autorizada. Não foi possível processar a transação. Questão relacionada a segurança, inadimplencia ou limite do portador."
+  action: "Transação não autorizada. Entre em contato com seu banco emissor."
+  retryable: true
+  card_error: false
+"U3":
+  message: "Transação não permitida. Falha na validação dos dados."
+  description: "Transação não permitida. Houve uma falha na validação dos dados. Solicite ao portador que reveja os dados e tente novamente. Se o erro persistir verifique a comunicação entre loja virtual e Cielo."
+  action: "Transação não permitida. Houve uma falha na validação dos dados. reveja os dados informados e tente novamente. Se o erro persistir entre em contato com a Loja Virtual."
   retryable: false
   card_error: false
