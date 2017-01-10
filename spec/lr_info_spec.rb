@@ -17,7 +17,7 @@ RSpec.describe Cielo::LRInfo do
 
       expect(subject.message).to eql("Código 888 não identificado")
       expect(subject.description).to eql("Código 888 não identificado")
-      expect(subject.action).to eql("Entre em contato com o Suporte Web Cielo eCommerce")
+      expect(subject.action).to eql("Não foi possível processar a transação. Entre em contato com a loja virtual.")
       expect(subject.retryable).to eql(false)
       expect(subject.card_error).to eql(false)
     end

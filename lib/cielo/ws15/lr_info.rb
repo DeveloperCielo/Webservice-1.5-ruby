@@ -37,8 +37,7 @@ module Cielo
       {
         "message"        => "Código #{code} não identificado",
         "description"    => "Código #{code} não identificado",
-        "action"         => "Entre em contato com o Suporte Web Cielo eCommerce",
-        "client_message" => "Erro inesperado",
+        "action"         => "Não foi possível processar a transação. Entre em contato com a loja virtual.",
         "retryable"      => false,
         "card_error"     => false
       }
