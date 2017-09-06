@@ -240,7 +240,7 @@ transaction = cielo.transaction(
 
 transaction.tid = "100699306908642E1001"
 
-transaction = cielo.cacellation_request(transaction)
+transaction = cielo.cancellation_request(transaction)
 
 transaction.cancellation.each do |cancellation|
   puts "\t\t\tcódigo:        " + cancellation.code
@@ -278,7 +278,7 @@ transaction = cielo.transaction(
 
 transaction.tid = "100699306908642E1001"
 
-transaction = cielo.cacellation_request(transaction, 5000)
+transaction = cielo.cancellation_request(transaction, 5000)
 
 transaction.cancellation.each do |cancellation|
   puts "\t\t\tcódigo:        " + cancellation.code
